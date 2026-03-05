@@ -19,10 +19,6 @@ curl -fsSL https://is.gd/aqtive | sh
 
 ---
 
-To update your aqtive setup, re-run the command above ^^
-
----
-
 ## 📜 License
 
 &copy; Aqtive 2026. Code released under the [MIT license](https://github.com/Kaiserrrrrr/aqtive/blob/master/LICENSE).
