@@ -1,5 +1,5 @@
 #!/bin/bash
-
+{
 sudo journalctl --vacuum-size=5M 
 sudo sed -i 's/#SystemMaxUse=/SystemMaxUse=5M/' /etc/systemd/journald.conf
 sudo sed -i 's/#RuntimeMaxUse=/RuntimeMaxUse=5M/' /etc/systemd/journald.conf
@@ -15,4 +15,6 @@ done
 
 pacman -Qtdq | xargs -r sudo pacman -Rns --noconfirm
 sudo pacman -Scc --noconfirm 
+} >/dev/null 2>&1
+
 echo -e "\e[32m[✓] Cleanup Complete\e[0m"
