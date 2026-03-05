@@ -8,9 +8,12 @@ LXQt on Arch made effortless
 | **Storage** | 4GB | ≥8GB |
 | **Architecture** | Arch Linux | Post-Archinstall |
 
-## 🚀 Installation (Post-Archinstall)
+## 🚀 Installation
 Run this command after using Archinstall (as a user with `sudo` privileges). 
 
 ```bash
 curl -fsSL https://is.gd/aqtive | sh
 ```
+
+## 📦 Update
+Re-run the installation command to update your `aqtive` install
