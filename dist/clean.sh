@@ -1,4 +1,5 @@
 #!/bin/bash
+
 {
 sudo journalctl --vacuum-size=5M 
 sudo sed -i 's/#SystemMaxUse=/SystemMaxUse=5M/' /etc/systemd/journald.conf
