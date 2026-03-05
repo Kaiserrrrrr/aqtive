@@ -14,10 +14,4 @@ Run this command after using Archinstall (as a user with `sudo` privileges).
 ```bash
 curl -fsSL https://is.gd/aqtive | sh
 ```
-
-## 📦 Updates
-Re-run the installation command to update your aqtive install (as a user with `sudo` privileges). 
-
-```bash
-curl -fsSL https://is.gd/aqtive | sh
-```
+To update your system, re-run the command as a use with `sudo` privileges.
