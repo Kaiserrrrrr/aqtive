@@ -18,4 +18,4 @@ pacman -Qtdq | xargs -r sudo pacman -Rns --noconfirm
 sudo pacman -Scc --noconfirm 
 } >/dev/null 2>&1
 
-echo -e "\e[32m[✓] Cleanup Complete\e[0m"
+echo -e "[✓] Cleanup Complete"
