@@ -1,5 +1,5 @@
-# ***🪽 LXI*** 
-LXQt install for Arch Linux made effortless
+# ***🪽 A(Qt)ive*** 
+LXQt on Arch made effortless
 ## 📜 System Requirements
 | Component | Minimum | Recommended |
 | :--- | :--- | :--- |
