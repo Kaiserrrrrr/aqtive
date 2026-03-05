@@ -16,4 +16,8 @@ curl -fsSL https://is.gd/aqtive | sh
 ```
 
 ## 📦 Updates
-Re-run the installation command to update your aqtive install.
+Re-run the installation command to update your aqtive install (as a user with `sudo` privileges). 
+
+```bash
+curl -fsSL https://is.gd/aqtive | sh
+```
