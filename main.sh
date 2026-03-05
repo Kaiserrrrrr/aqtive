@@ -5,7 +5,7 @@ URL="https://raw.githubusercontent.com/Kaiserrrrrr/LXI/main/dist"
 if pgrep -x "lxqt-session" > /dev/null; then
     curl -fsSL "$URL/install.sh" | sh && \
     curl -fsSL "$URL/clean.sh" | sh && \
-    echo -e "\e[32m[✓] LXI Update Complete.\e[0m" && sync && sleep 3 && clear
+    echo -e "\e[32m[✓] LXI Update Complete.\e[0m" && sync
 else
     curl -fsSL "$URL/install.sh" | sh && \
     curl -fsSL "$URL/config.sh" | sh && \
