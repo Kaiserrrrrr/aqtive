@@ -14,13 +14,13 @@ UTIL="breeze-icons gvfs xdg-utils xorg-server lightdm lightdm-gtk-greeter light-
 { [[ "$IS_LAPTOP" == "1" ]] && DRIVERS+=" xf86-input-libinput tlp" || true; }
 { grep -q "^\[multilib\]" /etc/pacman.conf && DRIVERS+=" lib32-mesa" || true; }
 
-sudo pacman -S --noconfirm --needed $DRIVERS $LXQT $UTIL >/dev/null 2>&1
+sudo pacman -S --noconfirm --needed $DRIVERS $LXQT $UTIL
 
-{ [[ ! -f /etc/systemd/zram-generator.conf ]] && echo -e "[zram0]\nzram-size = ram * 0.6\ncompression-algorithm = zstd\nswap-priority = 100\nfs-type = swap" | sudo tee /etc/systemd/zram-generator.conf >/dev/null || true; }
-sudo systemctl daemon-reload >/dev/null 2>&1 && sudo usermod -aG video,audio,lp,scanner $USER >/dev/null 2>&1
-{ [[ "$IS_LAPTOP" == "1" ]] && sudo systemctl enable tlp >/dev/null 2>&1; }
-{ [[ "$IS_LAPTOP" == "1" && "$CPU_VENDOR" =~ "GenuineIntel" ]] && sudo systemctl enable thermald >/dev/null 2>&1; }
-sudo systemctl enable lightdm bluetooth NetworkManager >/dev/null 2>&1
-sudo -u "$(logname)" systemctl --user enable --now pipewire pipewire-pulse wireplumber >/dev/null 2>&1
+{ [[ ! -f /etc/systemd/zram-generator.conf ]] && echo -e "[zram0]\nzram-size = ram * 0.6\ncompression-algorithm = zstd\nswap-priority = 100\nfs-type = swap" | sudo tee /etc/systemd/zram-generator.conf || true; }
+sudo systemctl daemon-reload && sudo usermod -aG video,audio,lp,scanner $USER
+{ [[ "$IS_LAPTOP" == "1" ]] && sudo systemctl enable tlp }
+{ [[ "$IS_LAPTOP" == "1" && "$CPU_VENDOR" =~ "GenuineIntel" ]] && sudo systemctl enable thermald; }
+sudo systemctl enable lightdm bluetooth NetworkManager
+sudo -u "$(logname)" systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 echo -e "\e[32m[✓] Installation Complete\e[0m"
