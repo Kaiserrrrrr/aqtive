@@ -1,9 +1,6 @@
 #!/bin/bash
 
-sudo -v; URL="https://raw.githubusercontent.com/Kaiserrrrrr/aqtive/main/dist"
-reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
-
-clear && echo '
+sudo -v; clear && echo '
 
  /$$           /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$ /$$    /$$ /$$$$$$$$
 |  $$         /$$__  $$ /$$__  $$|__  $$__/|_  $$_/| $$   | $$| $$_____/
@@ -16,6 +13,9 @@ clear && echo '
                              \__/                                       
 
 ' | cat
+
+URL="https://raw.githubusercontent.com/Kaiserrrrrr/aqtive/main/dist"
+reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
 if pgrep -x "lxqt-session" > /dev/null; then
     curl -fsSL "$URL/install.sh" | sh && \
