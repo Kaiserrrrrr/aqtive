@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo -v; clear && echo '
+if ! command pacman > /dev/null 2>&1; then echo "Pacman Package Manager Missing!" && exit 1; fi; sudo -v; clear && echo '
 
  /$$           /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$ /$$    /$$ /$$$$$$$$
 |  $$         /$$__  $$ /$$__  $$|__  $$__/|_  $$_/| $$   | $$| $$_____/
