@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo -v; URL="https://raw.githubusercontent.com/Kaiserrrrrr/aqtive/main/dist"
-reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) return 0 ;; *) return 0 ;; esac; }
+reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
 clear && echo '
 
