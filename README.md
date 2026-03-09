@@ -19,14 +19,14 @@ curl -fsSL https://is.gd/aqtive | sh
 
 ---
 
-## How it works
+## ❓ How it works
 
 ```mermaid
 sequenceDiagram
     autonumber
     participant U as User/Sudo
     participant M as main.sh
-    participant S as /src/ (Remote/Local)
+    participant S as /src/ 
     participant Sys as Linux System
 
     Note over U, Sys: Execution Starts
