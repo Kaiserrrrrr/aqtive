@@ -1,0 +1,1 @@
+lxde-common openbox pcmanfm lxterminal leafpad gpicview gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter
