@@ -1,1 +1,1 @@
-lxde-common openbox pcmanfm lxterminal leafpad gpicview gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter
+lxde-common openbox pcmanfm lxterminal leafpad gpicview lxlock xscreensaver gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter network-manager-applet blueman
