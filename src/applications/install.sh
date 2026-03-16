@@ -3,7 +3,7 @@
 echo -n "Installing Packages... " && {
 CPU_VENDOR=$(grep -m1 'vendor_id' /proc/cpuinfo)
 IS_LAPTOP=$(cat /sys/class/dmi/id/chassis_type | grep -qE '8|9|10|11|12|14|30|31|32' && echo 1 || echo 0)
-DRIVERS="sof-firmware alsa-firmware udisks2"
+DRIVERS="sof-firmware alsa-firmware udisks2 zram-generator"
 UTIL="fastfetch htop pipewire-audio pipewire-pulse alsa-utils bluez bluez-utils networkmanager"
 
 { [[ "$CPU_VENDOR" =~ "GenuineIntel" ]] && DRIVERS+=" intel-ucode vulkan-intel intel-media-driver thermald" || DRIVERS+=" amd-ucode"; }
