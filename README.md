@@ -8,7 +8,7 @@ post-archinstall made effortless.
 | **Disk Space** | 8GB | ≥16GB |
 | **Architecture** | Arch Linux | Post-Archinstall |
 
-(minimum specs applies only for `LXQT` and `LXDE` flavours)
+<small>(minimum specs applies only for `LXQT` and `LXDE` flavours)</small>
 ---
 
 ## 🚀 Installation
