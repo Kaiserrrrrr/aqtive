@@ -1,0 +1,1 @@
+cosmic-session cosmic-files cosmic-terminal cosmic-edit cosmic-screenshot cosmic-applets gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji greetingd
