@@ -51,3 +51,6 @@ elif echo "$PKG" | grep -q "lightdm"; then
 elif echo "$PKG" | grep -q "greetingd"; then
     sudo systemctl enable greetingd
 fi
+
+
+sync && echo "$DE installation complete... Rebooting to apply changes." && reboot 
