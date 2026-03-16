@@ -3,9 +3,41 @@
 sudo -v; clear
 
 URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de"
-DE="lxqt"
 
-# read -p ""
+while true; do
+    echo "--- Select a Desktop Environment ---"
+    echo "1) Budgie        2) Cinnamon      3) COSMIC       4) Cutefish"
+    echo "5) Deepin        6) Enlightenment 7) GNOME        8) KDE Plasma"
+    echo "9) LXDE         10) LXQt         11) MATE        12) Sugar"
+    echo "13) Xfce"
+    echo "-------------------------------------"
+    
+    read -p "Enter selection (1-13): " CHOICE
 
-PKG=$(curl -s $URL/$DE/install.txt)
-sudo pacman -Syu --noconfirm && sudo pacman $PKG --noconfirm && sudo pacman -Scc --noconfirm
+    case $CHOICE in
+        1)  DE="budgie"; break ;;
+        2)  DE="cinnamon"; break ;;
+        3)  DE="cosmic"; break ;;
+        4)  DE="cutefish"; break ;;
+        5)  DE="deepin"; break ;;
+        6)  DE="enlightenment"; break ;;
+        7)  DE="gnome"; break ;;
+        8)  DE="plasma"; break ;;
+        9)  DE="lxde"; break ;;
+        10) DE="lxqt"; break ;;
+        11) DE="mate"; break ;;
+        12) DE="sugar"; break ;;
+        13) DE="xfce"; break ;;
+        *)  clear
+            echo "Error: '$CHOICE' is not a valid option. Please try again."
+            echo "" ;;
+    esac
+done
+
+PKG=$(curl -s "$URL/$DE/install.txt")
+
+if [ -n "$PKG" ]; then
+    sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm
+else
+    echo "Error: Could not retrieve package list for $DE."
+fi
