@@ -49,4 +49,4 @@ elif echo "$PKG" | grep -q "greetd"; then
 fi
 
 
-sync && echo "$DE Installation Complete... " && {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
+sync && echo -e "$DE Installation Complete...\n" && {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
