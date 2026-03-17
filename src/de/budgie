@@ -1,1 +1,1 @@
-budgie-desktop budgie-control-center nautilus gnome-terminal gedit eog gnome-screenshot budgie-screensaver gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter network-manager-applet blueman
+budgie-desktop budgie-control-center budgie-session budgie-screensaver budgie-desktop-view nautilus gnome-terminal gnome-screenshot budgie-extras gnome-themes-extra gdm xdg-desktop-portal-gnome gvfs gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji blueman network-manager-applet
